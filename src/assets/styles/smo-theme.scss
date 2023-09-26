@@ -1,0 +1,102 @@
+/*
+ Copyright 2018-present Sonatype, Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+@import '~@angular/material/theming';
+
+// Individual colours
+$smo-white: #fff;
+$smo-blue: #336699;
+$smo-purple: #885195;
+$smo-text-color: #4a4a4a;
+$smo-muted-color: #999;
+$smo-border-color:  rgba(10, 10, 10, 0.1);
+$smo-border-color-2:  #eee;
+$smo-link-color: #3572b0;
+$smo-link-hover: #363636;
+
+// Theme Pallets
+
+$smo-primary: (
+  50 : #e7edf3,
+  100 : #c2d1e0,
+  200 : #99b3cc,
+  300 : #7094b8,
+  400 : #527da8,
+  500 : #336699,
+  600 : #2e5e91,
+  700 : #275386,
+  800 : #20497c,
+  900 : #14386b,
+  A100 : #a2c5ff,
+  A200 : #6fa5ff,
+  A400 : #3c84ff,
+  A700 : #2374ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$smo-accent: (
+  50 : #f1eaf2,
+  100 : #dbcbdf,
+  200 : #c4a8ca,
+  300 : #ac85b5,
+  400 : #9a6ba5,
+  500 : #885195,
+  600 : #804a8d,
+  700 : #754082,
+  800 : #6b3778,
+  900 : #582767,
+  A100 : #ebacff,
+  A200 : #de79ff,
+  A400 : #d246ff,
+  A700 : #cc2cff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+
+$primary: mat-palette($smo-primary);
+$accent: mat-palette($smo-accent);
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

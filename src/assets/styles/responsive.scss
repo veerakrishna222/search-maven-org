@@ -1,0 +1,100 @@
+/*
+ Copyright 2018-present Sonatype, Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+@mixin smo-full-size() {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin smo-fill() {
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+@mixin smo-flex() {
+  flex: 1 1 auto;
+}
+
+@mixin smo-flex-100() {
+  flex: 1 1 100%;
+}
+
+@mixin smo-flex-layout() {
+  display: flex;
+}
+
+@mixin smo-flex-layout-column() {
+  flex-direction: column;
+
+  @include smo-flex-layout();
+}
+
+@mixin smo-flex-layout-row() {
+  flex-direction: row;
+
+  @include smo-flex-layout();
+}
+
+@mixin smo-gt-sm() {
+  @media screen and (min-width: 600px) {
+    @content
+  }
+}
+
+@mixin smo-gt-md() {
+  @media screen and (min-width: 960px) {
+      @content
+  }
+}
+
+@mixin smo-gt-lg() {
+  @media screen and (min-width: 1280px) {
+    @content
+  }
+}
+
+@mixin smo-lt-sm() {
+  @media screen and (max-width: 599px){
+    @content
+  }
+}
+
+@mixin smo-lt-md() {
+  @media screen and (max-width: 959px){
+    @content
+  }
+}
+
+@mixin smo-lt-lg() {
+  @media screen and (max-width: 1279px){
+    @content
+  }
+}
+
+@mixin smo-lt($size) {
+  @media screen and (max-width: $size){
+    @content
+  }
+}
+
+@mixin smo-gt($size) {
+  @media screen and (min-width: $size) {
+    @content
+  }
+}
